@@ -1,0 +1,124 @@
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    /* Left Panel - Mobile */
+    .left-panel {
+        flex: none;
+        padding: 1rem;
+        gap: 1.5rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .building-label {
+        font-size: 1.25rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Right Panel - Mobile */
+    .right-panel {
+        flex: none;
+        height: 70vh;
+        min-height: 600px;
+    }
+
+    .view {
+        padding: 1.5rem;
+    }
+
+    /* Elevator Pitch - Mobile */
+    .elevator-content p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    /* Spotify View - Mobile */
+    .spotify-container {
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .album-art {
+        width: 200px;
+        height: 200px;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .artist-name {
+        font-size: 0.95rem;
+    }
+
+    .project-date {
+        font-size: 0.85rem;
+    }
+
+    .controls {
+        gap: 1.25rem;
+    }
+
+    .control-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .play-pause-btn svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .name {
+        font-size: 1.75rem;
+    }
+
+    .building-label {
+        font-size: 1.1rem;
+    }
+
+    .elevator-content p {
+        font-size: 1rem;
+    }
+
+    .album-art {
+        width: 180px;
+        height: 180px;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+}
