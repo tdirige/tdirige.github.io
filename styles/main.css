@@ -7,10 +7,9 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    background-attachment: fixed;
+    background: #F5F0E8;
     min-height: 100vh;
-    color: #fff;
+    color: #1a1a1a;
     overflow: hidden;
 }
 
@@ -35,27 +34,32 @@ body {
 
 .name {
     font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
     transition: text-shadow 0.3s ease;
 }
 
 .name.glow-active {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.6),
-                 0 0 30px rgba(255, 255, 255, 0.4);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2),
+                 0 0 20px rgba(0, 0, 0, 0.12),
+                 0 0 30px rgba(0, 0, 0, 0.08);
 }
 
 .building-label {
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 150;
+    text-transform: lowercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
     transition: text-shadow 0.3s ease;
 }
 
 .building-label.glow-active {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.6),
-                 0 0 30px rgba(255, 255, 255, 0.4);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2),
+                 0 0 20px rgba(0, 0, 0, 0.12),
+                 0 0 30px rgba(0, 0, 0, 0.08);
 }
 
 .social-icons {
@@ -64,7 +68,7 @@ body {
 }
 
 .icon-link {
-    color: #fff;
+    color: #000;
     transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 0.9;
 }
@@ -104,13 +108,13 @@ body {
 
 /* Elevator Pitch View */
 .elevator-view {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.04);
     backdrop-filter: blur(10px);
     border-radius: 20px;
 }
 
 .elevator-content {
-    max-width: 500px;
+    max-width: 750px;
 }
 
 .elevator-content p {
@@ -122,9 +126,42 @@ body {
 
 /* Spotify View */
 .spotify-view {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.04);
     backdrop-filter: blur(10px);
     border-radius: 20px;
+}
+
+.spotify-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    max-width: 860px;
+    padding: 2rem;
+}
+
+/* Transcript Panel */
+.transcript-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.transcript-line {
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.transcript-word {
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+.transcript-word.active {
+    opacity: 1;
+    font-weight: 600;
 }
 
 .spotify-container {
@@ -132,25 +169,24 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    max-width: 400px;
+    max-width: 340px;
     width: 100%;
-    padding: 2rem;
 }
 
 /* Album Art */
 .album-art {
     width: 250px;
     height: 250px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.06);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .album-art img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Project Info */
@@ -194,7 +230,7 @@ body {
 .progress-bar-container {
     flex: 1;
     height: 4px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.12);
     border-radius: 2px;
     overflow: hidden;
 }
@@ -202,7 +238,7 @@ body {
 .progress-bar {
     height: 100%;
     width: 0%;
-    background: #fff;
+    background: #333;
     border-radius: 2px;
     transition: width 0.1s linear;
 }
@@ -218,7 +254,7 @@ body {
 .control-btn {
     background: none;
     border: none;
-    color: #fff;
+    color: #333;
     cursor: pointer;
     padding: 0.5rem;
     transition: transform 0.2s ease, opacity 0.2s ease;
@@ -234,14 +270,20 @@ body {
     transform: scale(0.95);
 }
 
+.control-btn.disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+}
+
 .control-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 .play-pause-btn svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
 }
 
 /* Device Label */

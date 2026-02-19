@@ -28,21 +28,21 @@ function formatTime(seconds) {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
-// Update UI elements
+// Update time and progress bar only (called every tick)
 function updateDisplay() {
-    // Update time
     timeElapsed.textContent = formatTime(currentTime);
-
-    // Update progress bar
     const percentage = (currentTime / TOTAL_TIME) * 100;
     progressBar.style.width = `${percentage}%`;
+}
 
-    // Update project info
+// Update project info and notify transcript (called only on project change)
+function updateProjectInfo() {
     const project = projects[currentProjectIndex];
     projectTitle.textContent = project.title;
     projectDate.textContent = project.dateRange;
     projectImage.src = project.image;
     projectImage.alt = project.title;
+    document.dispatchEvent(new CustomEvent('projectchange', { detail: { index: currentProjectIndex } }));
 }
 
 // Start timer
@@ -93,6 +93,7 @@ function nextProject() {
     pauseTimer();
     currentProjectIndex = (currentProjectIndex + 1) % projects.length;
     currentTime = 0;
+    updateProjectInfo();
     updateDisplay();
     startTimer(); // Auto-continue playing
 }
@@ -102,12 +103,14 @@ function previousProject() {
     pauseTimer();
     currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
     currentTime = 0;
+    updateProjectInfo();
     updateDisplay();
 }
 
 // Initialize timer
 function initTimer() {
     // Set initial display
+    updateProjectInfo();
     updateDisplay();
 
     // Event listeners

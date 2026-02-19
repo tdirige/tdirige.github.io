@@ -38,6 +38,9 @@ function initScrollBehavior() {
 
     // Set initial glow (View 1)
     updateGlowEffects();
+
+    // Building label clicks to projects view
+    buildingElement.addEventListener('click', () => scrollToView(1));
 }
 
 // Programmatic scroll to specific view

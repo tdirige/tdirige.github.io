@@ -58,9 +58,23 @@
     }
 
     /* Spotify View - Mobile */
-    .spotify-container {
+    .spotify-layout {
+        flex-direction: column;
+        gap: 2rem;
         padding: 1.5rem;
+    }
+
+    .spotify-container {
         gap: 1.25rem;
+    }
+
+    .transcript-panel {
+        width: 100%;
+        gap: 1.25rem;
+    }
+
+    .transcript-line {
+        font-size: 0.95rem;
     }
 
     .album-art {

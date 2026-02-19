@@ -5,14 +5,14 @@ const projects = [
         title: "UCI's 1st AI Case Comp",
         artist: "Thad",
         dateRange: "Sep. '25 to Nov. '25",
-        image: "assets/projects/placeholder.svg"
+        image: "assets/projects/ai-case-comp.jpg"
     },
     {
         id: 2,
-        title: "TBD",
+        title: "NIL Pace",
         artist: "Thad",
-        dateRange: "TBD",
-        image: "assets/projects/placeholder.svg"
+        dateRange: "Jan '25 to Present",
+        image: "assets/projects/nil-pace.png"
     }
 ];
 
