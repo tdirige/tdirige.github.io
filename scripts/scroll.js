@@ -3,18 +3,18 @@
 let currentViewIndex = 0;
 const rightPanel = document.getElementById('right-panel');
 const nameElement = document.getElementById('name');
-const buildingElement = document.getElementById('building-label');
+const projectsElement = document.getElementById('projects-label');
 
 // Update glow effects based on current view
 function updateGlowEffects() {
     if (currentViewIndex === 0) {
         // View 1: Elevator Pitch - glow on name
         nameElement.classList.add('glow-active');
-        buildingElement.classList.remove('glow-active');
+        projectsElement.classList.remove('glow-active');
     } else {
-        // View 2: Spotify UI - glow on building
+        // View 2: Spotify UI - glow on projects
         nameElement.classList.remove('glow-active');
-        buildingElement.classList.add('glow-active');
+        projectsElement.classList.add('glow-active');
     }
 }
 
@@ -39,8 +39,8 @@ function initScrollBehavior() {
     // Set initial glow (View 1)
     updateGlowEffects();
 
-    // Building label clicks to projects view
-    buildingElement.addEventListener('click', () => scrollToView(1));
+    // Projects label clicks to projects view
+    projectsElement.addEventListener('click', () => scrollToView(1));
 }
 
 // Programmatic scroll to specific view

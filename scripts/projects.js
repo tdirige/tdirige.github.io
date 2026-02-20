@@ -2,17 +2,38 @@
 const projects = [
     {
         id: 1,
-        title: "UCI's 1st AI Case Comp",
+        title: "NIL Pace",
         artist: "Thad",
-        dateRange: "Sep. '25 to Nov. '25",
-        image: "assets/projects/ai-case-comp.jpg"
+        dateRange: "JAN. '25 to present",
+        image: "assets/projects/nil-pace.png"
     },
     {
         id: 2,
-        title: "NIL Pace",
+        title: "UCI's 1st AI Case Comp",
         artist: "Thad",
-        dateRange: "Jan '25 to Present",
-        image: "assets/projects/nil-pace.png"
+        dateRange: "SEP. '25 to NOV. '25",
+        image: "assets/projects/ai-case-comp.jpg"
+    },
+    {
+        id: 3,
+        title: "AT&T",
+        artist: "Thad",
+        dateRange: "JUN. '24 to AUG. '24",
+        image: "assets/projects/att.jpg"
+    },
+    {
+        id: 4,
+        title: "Extern",
+        artist: "Thad",
+        dateRange: "OCT. '23 to DEC. '23",
+        image: "assets/projects/ext.png"
+    },
+    {
+        id: 5,
+        title: "180 Degrees Consulting",
+        artist: "Thad",
+        dateRange: "OCT. '22 to present",
+        image: "assets/projects/180dc.jpg"
     }
 ];
 

@@ -47,7 +47,7 @@ body {
                  0 0 30px rgba(0, 0, 0, 0.08);
 }
 
-.building-label {
+.projects-label {
     font-size: 1.5rem;
     font-weight: 150;
     text-transform: lowercase;
@@ -56,7 +56,7 @@ body {
     transition: text-shadow 0.3s ease;
 }
 
-.building-label.glow-active {
+.projects-label.glow-active {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2),
                  0 0 20px rgba(0, 0, 0, 0.12),
                  0 0 30px rgba(0, 0, 0, 0.08);
@@ -84,13 +84,32 @@ body {
 }
 
 /* Right Panel (Dynamic) */
-.right-panel {
+.right-panel-wrapper {
     flex: 1;
+    position: relative;
+}
+
+.right-panel {
+    height: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 25%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: rgba(26, 26, 26, 0.25);
+    white-space: nowrap;
+    pointer-events: none;
+    letter-spacing: 0.2em;
+    font-weight: 150;
+    text-transform: lowercase;
 }
 
 .right-panel::-webkit-scrollbar {
